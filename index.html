@@ -24,9 +24,11 @@
         }
         /* Add more styles for other sections if needed */
         main {
-            max-width: 800px; /* Adjust this value as needed */
+            max-width: 900px; /* Adjust this value as needed */
             margin: 0 auto;
             padding: 1rem;
+            display: grid;
+            grid-gap: 1rem;
         }
         h1 {
             font-size: 36px;
@@ -55,6 +57,30 @@
             text-align: center;
             padding: 1rem;
         }
+        section {
+            /* Add styles for each section */
+            background-color: #22203d;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow-y: auto; /* Add vertical scroll for the Projects section */
+            max-height: 400px; /* Set a maximum height for the Projects section */
+        }
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+            max-width: 900px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            .two-columns {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -63,15 +89,28 @@
         <img src="docs/assets/images/profile_picture.jpg" alt="Jason Yan's Profile Picture" style="width: 200px; height: auto; margin-right: 1rem;">
         <div>
             <h1 style="font-family: 'Arial', sans-serif; font-size: 36px; margin-bottom: 0;">Zhengxu(Jason) Yan</h1>
-            <p style="font-size: 18px; margin-top: 0;">Computer Science Student at the University of California, Berkeley</p>
+            <p style="font-size: 18px; margin-top: 0;">Welcome to my personal website</p>
         </div>
     </header>
 
     <!-- Main content section -->
     <main>
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Add your introduction and information about yourself here.
+            </p>
+        </section>
 
         <section>
-            <h2>Projects</h2>
+            <h2>Research</h2>
+            <p>
+                Add information about your research projects here.
+            </p>
+        </section>
+
+        <section>
+            <h2>Projects (Scroll down to view more) </h2>
             <ul>
                 <li>
                     <a href="#">Hog(Python)</a> - Developed a simulator and multiple strategies for a dice game.
@@ -116,25 +155,25 @@
                     <a href="#">Pintos(C)</a> - Developed a Pintos operating system covering systems programming, memory allocation, resource allocation, file systems, networking, security, and more.
                 </li>
             </ul>
-        </section>        
+        </section> 
         
-
-        <section>
-            <h2>Resume</h2>
-            <p>
-                You can download my resume using the link below:
-                <br>
-                <a href="jason_yan_resume.pdf" target="_blank">Download Resume</a>
-            </p>
-        </section>
-
-        <section>
-            <h2>Contact</h2>
-            <p>
-                Email: <a href="mailto:jason.yan@berkeley.edu">jason.yan@berkeley.edu</a>
-                <br>
-                LinkedIn: <a href="https://www.linkedin.com/in/zhengxu-yan/">https://www.linkedin.com/in/zhengxu-yan/</a>
-            </p>
+        <section class="two-columns">
+            <div>
+                <h2>Contact</h2>
+                <p>
+                    Email: <a href="mailto:jason.yan@berkeley.edu">jason.yan@berkeley.edu</a>
+                    <br>
+                    LinkedIn: <a href="https://www.linkedin.com/in/zhengxu-yan/">https://www.linkedin.com/in/zhengxu-yan/</a>
+                </p>
+            </div>
+            <div>
+                <h2>Resume</h2>
+                <p>
+                    You can download my resume using the link below:
+                    <br>
+                    <a href="jason_yan_resume.pdf" target="_blank">Download Resume</a>
+                </p>
+            </div>
         </section>
     </main>
 
