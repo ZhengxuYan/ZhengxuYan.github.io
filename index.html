@@ -66,6 +66,13 @@
             overflow-y: auto; /* Add vertical scroll for the Projects section */
             max-height: 400px; /* Set a maximum height for the Projects section */
         }
+        section::-webkit-scrollbar {
+            width: 6px;
+        }
+        section::-webkit-scrollbar-thumb {
+            background-color: #755bb0;
+            border-radius: 6px;
+        }
         .two-columns {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -98,34 +105,51 @@
         <section>
             <h2>About Me</h2>
             <p>
-                Add your introduction and information about yourself here.
+                Hi there! I'm Jason, a Computer Science student at the University of California, Berkeley. I enjoy soccer, video games (especially League of Legends), coding, and playing badminton.
             </p>
         </section>
 
         <section>
             <h2>Research</h2>
+            <h3>Reducing Loneliness Among Aging Adults: The Roles of Personal Voice Assistants and Anthropomorphic Interactions</h3>
             <p>
-                Add information about your research projects here.
+                As a research assistant, I worked on processing transcripts of elders' interactions with Alexa using NLP techniques. The study aimed to gain insights into older people's voice interactions with smart voice assistants (SVA) and, ultimately, to alleviate loneliness in aging adults through the implementation of smart assistant-powered technology.
+               <a href="https://www.frontiersin.org/articles/10.3389/fpubh.2021.750736/full">Website</a>
             </p>
-        </section>
-
+            <h4>Publications</h4>
+            <p>
+                <strong>
+                A new tool for understanding older people’s use of artificial intelligence-powered smart voice assistants: From manual coding to natural language processing coding.
+                </strong> <a href="paper.pdf">Paper</a>
+                <br>
+                Authors: <strong>Zhengxu Yan</strong>, Victoria Dube, Judith Heselton, Kate Johnson, Changmin Yan, Valerie Jones, Julie Boron, Marcia Shade
+            </p>
+        </section>        
+        
+        
         <section>
-            <h2>Projects (Scroll down to view more) </h2>
+            <h2>Projects</h2>
             <ul>
                 <li>
-                    <a href="#">Hog(Python)</a> - Developed a simulator and multiple strategies for a dice game.
+                    <a href="https://excel-helper-deploy.vercel.app/">ExcelHelper(Django)</a> - Created an Web App that provides a convenient way to search(precise/fuzzy) for specific terms in an Excel file and generate search result summaries.
                 </li>
                 <li>
-                    <a href="#">Cats(Python)</a> - Wrote a program to measure typing speed and autocorrect the spelling.
+                    <a href="https://github.com/coffee-tea-team/coffee-tea">CoffeeTea(FastAPI)</a> - Participated in the development of a FastAPI Web app to assist students in a more transparent and efficient manner, aid in their search for suitable tutors 
                 </li>
                 <li>
-                    <a href="#">Ants(Python)</a> - Created a tower defense game inspired by PopCap Games' Plants vs Zombies.
+                    <a href="projects/hog.zip">Hog(Python)</a> - Developed a simulator and multiple strategies for a dice game.
                 </li>
                 <li>
-                    <a href="#">Scheme(Python)</a> - Developed an interpreter for a subset of the Scheme language.
+                    <a href="projects/cats.zip">Cats(Python)</a> - Wrote a program to measure typing speed and autocorrect the spelling.
                 </li>
                 <li>
-                    <a href="#">Spam(Python)</a> - Developed a machine learning model to classify emails as either spam or non-spam (ham).
+                    <a href="projects/ants.zip">Ants(Python)</a> - Created a tower defense game inspired by PopCap Games' Plants vs Zombies.
+                </li>
+                <li>
+                    <a href="projects/scheme.zip">Scheme(Python)</a> - Developed an interpreter for a subset of the Scheme language.
+                </li>
+                <li>
+                    <a href="projects/spam.ipynb.zip">Spam(Python)</a> - Developed a machine learning model to classify emails as either spam or non-spam (ham).
                 </li>
                 <li>
                     <a href="#">Enigma(Java)</a> - Built a simulator for a generalized version of Enigma, a cipher device used in World War II.
