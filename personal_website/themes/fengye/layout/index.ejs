@@ -20,6 +20,17 @@
         ">
         <%= config.title %>
       </h1>
+
+      <!-- About Me Section -->
+      <div class="max-w-prose mx-auto mt-8 mb-12">
+        <h2 class="text-2xl font-bold mb-4 text-center text-[var(--c-50)]">About Me</h2>
+        <div class="text-left px-8">
+          <p class="text-[var(--c-70)] leading-relaxed">
+            I'm currently a senior at UC Berkeley, majoring in Computer Science and Data Science. I have a keen interest in Machine Learning and enjoy staying updated with the latest developments in technology and software. In my free time, I enjoy playing soccer, video games (especially League of Legends), and badminton.
+          </p>
+        </div>
+      </div>
+
       <!-- Sub-title -->
       <p class="
         text-3xl font-extrabold text-center
@@ -31,6 +42,7 @@
         <div class="flex flex-row items-center gap-1">
           <iconify-icon width="24" icon="mingcute:building-1-fill"></iconify-icon>
           <p><%= theme.my_location %></p>
+          <span class="text-sm text-gray-500">(mingcute:building-1-fill)</span>
         </div>
         <div class="flex flex-row items-center gap-1 group">
           <iconify-icon class="transition-transform
@@ -38,6 +50,7 @@
           <a href="<%= theme.cv_path %>" class="group-hover:underline">
             CV (<%= theme.cv_last_update_date %>)
           </a>
+          <span class="text-sm text-gray-500">(mingcute:idcard-fill)</span>
         </div>
       </div>
       <!-- Description from config -->
@@ -72,4 +85,259 @@
   }) %>
 
   <% } %>
+
+  <!-- CV Content -->
+  <div class="cv-content max-w-4xl w-full mx-auto px-4">
+
+    <!-- Publications -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4 text-[var(--c-50)]">Publications</h2>
+      <ul class="list-disc ml-5 space-y-4 text-[var(--c-70)]">
+        <li>
+          <strong>Yan, Z.</strong>, Dube, V., Heselton, J., Johnson, K., Yan, C., Jones, V., Blaskewicz Boron, J., & Shade, M. (2024). Understanding older people's voice interactions with smart voice assistants: a new modified rule-based natural language processing model with human input. <i>Frontiers in digital health</i>, 6, 1329910. 
+          <a href="https://doi.org/10.3389/fdgth.2024.1329910" class="text-blue-500 hover:underline">https://doi.org/10.3389/fdgth.2024.1329910</a>
+        </li>
+        <li>
+          Jones, V. K., Yan, C., Shade, M. Y., Boron, J. B., <strong>Yan, Z.</strong>, Heselton, H. J., Johnson, K., & Dube, V. (2024). Reducing Loneliness and Improving Social Support among Older Adults through Different Modalities of Personal Voice Assistants. <i>Geriatrics (Basel, Switzerland)</i>, 9(2), 22. 
+          <a href="https://doi.org/10.3390/geriatrics9020022" class="text-blue-500 hover:underline">https://doi.org/10.3390/geriatrics9020022</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Working Papers -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4 text-[var(--c-50)]">Working Papers</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-semibold mb-2">DiT-Serving: Infinitely Long Video Generation Engine with Brick Attention Enhancing Throughput via Continuous Batching</h3>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Integrated Brick Attention into Diffusion Transformer (DiT) models to enable near-infinite video generation, supported by continuous batching to achieve increased throughput.</li>
+            <li>Under the guidance of PhD candidate Michael Luo, advised by Dr. Ion Stoica, Prof. of Computer Science, I led the integration of Brick Attention with DiT models, enhancing the system's capacity for extended video generation, and implemented continuous batching techniques that significantly improved system throughput. The manuscript is in preparation for review.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-2">Adaptive Operations Management in Buildings: A Reinforcement Learning Approach for Operational Adaptability in Healthcare Facilities</h3>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Introduced a Reinforcement Learning-based framework to enable adaptive and integrated operations management in healthcare facilities, optimizing spatial, social, and operational performance through coordinated resource sharing.</li>
+            <li>Supervised by Dr. Yehuda Kalay and Dr. Davide Schaumann, I utilized deep reinforcement learning (RL) and simulation to develop a smart building management system for the Cardiac Catheterization Lab at St. Bernardine Medical Center.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4 text-[var(--c-50)]">Work Experience</h2>
+      <div class="space-y-6">
+        <div class="experience-item">
+          <div class="flex justify-between items-start">
+            <h3 class="font-semibold">Teaching Assistant for Large Language Model Agents (CS 194-196)</h3>
+            <span class="text-[var(--c-60)]">August 2024 - Present</span>
+          </div>
+          <p class="italic text-[var(--c-70)]">Department of Electrical Engineering and Computer Sciences at UC Berkeley</p>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Coordinated course logistics, managed lecture recordings, enhanced assignment materials, and provided academic support by addressing student inquiries.</li>
+            <li>Assisted in organizing and coordinating the LLM Agents Hackathon, hosted by Berkeley RDI in conjunction with the LLM Agents MOOC, designed to foster innovation, expand the AI agent community, and advance LLM agent technology.</li>
+          </ul>
+        </div>
+        <!-- Add other work experiences similarly -->
+      </div>
+    </section>
+
+    <!-- Work Experience (continued) -->
+    <section class="mb-12">
+      <div class="space-y-6">
+        <!-- Previous work experience entries ... -->
+
+        <div class="experience-item">
+          <div class="flex justify-between items-start">
+            <h3 class="font-semibold">Research Assistant</h3>
+            <span class="text-[var(--c-60)]">February 2024 - Present</span>
+          </div>
+          <p class="italic text-[var(--c-70)]">UC Berkeley Sky Computing Lab</p>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Competitively selected through UC Berkeley EECS Diversifying Access to Research in Engineering (DARE) and Sky Summer Undergraduate Programs to join the DiT-Serving Project as a research assistant.</li>
+            <li>Led a team of 5 research assistants in integrating Ring Attention and Brick Attention into Diffusion Transformer (DiT) models, pioneering scalable video generation techniques.</li>
+            <li>Directed continuous batching strategies to optimize system throughput, enhancing performance efficiency across video processing requests.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="flex justify-between items-start">
+            <h3 class="font-semibold">Research Assistant</h3>
+            <span class="text-[var(--c-60)]">February 2024 - Present</span>
+          </div>
+          <p class="italic text-[var(--c-70)]">UC Berkeley College of Environmental Design</p>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Competitively selected to join the Smart Hospital Project through UC Berkeley Undergraduate Research Apprentice Program.</li>
+            <li>Led a team of 3 research assistants in the development and implementation of a deep reinforcement learning-based smart building management system for the Cardiac Catheterization Lab at St. Bernardine Medical Center.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="flex justify-between items-start">
+            <h3 class="font-semibold">Machine Learning (ML) Engineer Lead</h3>
+            <span class="text-[var(--c-60)]">January 2024 - Present</span>
+          </div>
+          <p class="italic text-[var(--c-70)]">UC Berkeley School of Public Health</p>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Selected as lead computer scientist for Rapid Reviews: Infectious Diseases via the UC Berkeley CDSS Discovery Program.</li>
+            <li>Independently leveraged a fine-tuned Large Language Model (LLM) to efficiently categorize and identify preprints within the RR\ID domain.</li>
+            <li>Led a team of 3 UC Berkeley CS students in utilizing LLM APIs to analyze and provide insights on medical preprints.</li>
+            <li>Directed a team of 5 UC Berkeley CS students in engineering scripts to automate the collection of medical preprints.</li>
+            <li>Collaborated with the Dean of the UC Berkeley School of Public Health and researchers from UCSF to develop automated systems for academic review.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="flex justify-between items-start">
+            <h3 class="font-semibold">Research Assistant</h3>
+            <span class="text-[var(--c-60)]">April 2023 – September 2023</span>
+          </div>
+          <p class="italic text-[var(--c-70)]">University of Nebraska</p>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Collaborated with gerontology and nursing researchers to develop a natural language processing (NLP) model designed to automate the processing of speech-to-text data from user interactions with AI-enabled smart voice assistants.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="flex justify-between items-start">
+            <h3 class="font-semibold">Backend Engineer Lead</h3>
+            <span class="text-[var(--c-60)]">October 2022 – December 2022</span>
+          </div>
+          <p class="italic text-[var(--c-70)]">Coffee Tea, Inc.</p>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Led a team of 3 UC Berkeley computer science students in backend development for a social platform.</li>
+            <li>Directed the design and development of backend REST APIs using FastAPI, Poetry, Alembic, and PostgreSQL.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4 text-[var(--c-50)]">Projects</h2>
+      
+      <!-- Machine Learning Projects -->
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold mb-4">Machine Learning</h3>
+        
+        <div class="project-item mb-6">
+          <div class="flex justify-between items-start">
+            <h4 class="font-medium">Multi-Agent LLM Trading System</h4>
+            <span class="text-[var(--c-60)]">August 2024 – Present</span>
+          </div>
+          <p class="text-[var(--c-70)] italic">Python, Pytorch, Tensorflow, AutoGen</p>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Developed a multi-agent trading system integrating LLMs with specialized agents for multimodal data processing.</li>
+          </ul>
+        </div>
+
+        <div class="project-item mb-6">
+          <div class="flex justify-between items-start">
+            <h4 class="font-medium">IM2SPAIN Project</h4>
+            <span class="text-[var(--c-60)]">January 2024 – May 2024</span>
+          </div>
+          <p class="text-[var(--c-70)] italic">Python</p>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Employed nearest neighbors (k-NN) to predict geographic coordinates based on CLIP embeddings of geo-tagged images from Flickr.</li>
+          </ul>
+        </div>
+
+        <div class="project-item mb-6">
+          <div class="flex justify-between items-start">
+            <h4 class="font-medium">MNIST Competition</h4>
+            <span class="text-[var(--c-60)]">January 2024 – May 2024</span>
+          </div>
+          <p class="text-[var(--c-70)] italic">Python, Pytorch</p>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Engaged in the Kaggle MNIST classification challenge, leveraging various machine learning techniques including LDA, QDA, Logistic Regression, MLP, SVM, and CNN.</li>
+          </ul>
+        </div>
+
+        <div class="project-item mb-6">
+          <div class="flex justify-between items-start">
+            <h4 class="font-medium">Language Identification RNN</h4>
+            <span class="text-[var(--c-60)]">August 2023 – December 2023</span>
+          </div>
+          <p class="text-[var(--c-70)] italic">Python, Tensorflow</p>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Engineered an RNN to identify word languages, achieving over 81% test set accuracy.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Systems Programming Projects -->
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold mb-4">Systems Programming and Software Development</h3>
+        
+        <div class="project-item mb-6">
+          <div class="flex justify-between items-start">
+            <h4 class="font-medium">Pintos Operating System</h4>
+            <span class="text-[var(--c-60)]">January 2023 – May 2023</span>
+          </div>
+          <p class="text-[var(--c-70)] italic">C, Rust</p>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Led the development of a comprehensive Pintos operating system, focusing on systems programming, memory allocation, resource management, file systems, networking, and security.</li>
+          </ul>
+        </div>
+
+        <div class="project-item mb-6">
+          <div class="flex justify-between items-start">
+            <h4 class="font-medium">Secure Client Application</h4>
+            <span class="text-[var(--c-60)]">January 2023 – May 2023</span>
+          </div>
+          <p class="text-[var(--c-70)] italic">Golang</p>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Developed a secure client Golang application incorporating cryptographic primitives for authentication and file management.</li>
+          </ul>
+        </div>
+
+        <div class="project-item mb-6">
+          <div class="flex justify-between items-start">
+            <h4 class="font-medium">Gitlet Version Control System</h4>
+            <span class="text-[var(--c-60)]">January 2021 – May 2022</span>
+          </div>
+          <p class="text-[var(--c-70)] italic">Java</p>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Created "Gitlet," a Git-like Version Control System, to streamline tracking and management of code changes across projects.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 text-[var(--c-50)]">Education</h2>
+        <div class="mb-4">
+          <div class="flex justify-between items-start">
+            <h3 class="font-semibold">University of California, Berkeley</h3>
+            <span class="text-[var(--c-60)]">Expected Graduation: May 2025</span>
+          </div>
+          <p class="text-[var(--c-70)]">Bachelor of Arts in Computer Science and Data Science</p>
+          <p class="text-[var(--c-70)]">GPA: 3.94/4.00, Dean's List, Honors to Date</p>
+          <p class="text-[var(--c-70)] mt-2">Coursework:</p>
+          <p class="text-[var(--c-70)]">Principles & Techniques of Data Science (Data C8/C100), Computer Programs (CS 61A), Data Structures (CS 61B), Machine Structures (CS 61C), Discrete Math and Probability (CS 70), Optimization Models (EECS 127), Probability for Data Science (Data C140), Computer Security (CS 161), Operating Systems (CS 162), Efficient Algorithm (CS 170), Computer Vision (CS 180), Artificial Intelligence (CS 188), Machine Learning (CS 189), LLM Agents (CS 194-196).</p>
+        </div>
+  
+        <div class="mb-4">
+          <div class="flex justify-between items-start">
+            <h3 class="font-semibold">Brownell Talbot School</h3>
+            <span class="text-[var(--c-60)]">2017 - 2021</span>
+          </div>
+          <p class="text-[var(--c-70)]">GPA: 4.13/4.00</p>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Nebraska Class C State Championship team, Jan 2021</li>
+            <li>University of Nebraska-Omaha Summer Scholars Program, Aug 2020</li>
+            <li>Vex Robotics National rank 19 in Skills challenge, Jan 2020</li>
+            <li>Vex Robotics Global rank 44 Programmer, Jan 2020</li>
+            <li>Nebraska Math Competition State Finals, 19th place, Jan 2020</li>
+            <li>VEX Tournament Champions in multiple robotics tournaments</li>
+            <li>Excellence Award in Elkhorn HS VRC & Heartland Regional Robotics Championship</li>
+            <li>University of Nebraska-Lincoln Engineering Summer Research Program, Scholarship winner</li>
+          </ul>
+        </div>
+      </section>
+  </div>
 </div>

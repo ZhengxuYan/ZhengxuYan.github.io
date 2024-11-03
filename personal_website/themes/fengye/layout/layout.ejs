@@ -7,9 +7,11 @@
   class="
     bg-[var(--c-0)]
     text-[var(--c-80)]
+    min-h-screen
+    flex flex-col
   ">
   <%- partial('_partial/header', {cache: true}) %>
-  <main>
+  <main class="flex-1">
     <%- body %>
   </main>
   <%- partial('_partial/footer', {cache: true}) %>

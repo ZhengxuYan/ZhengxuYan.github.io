@@ -1,40 +1,43 @@
 # Header
 nav:
   # Home: /index
-  posts:
-    path: ./archives
-    icon: mingcute:inbox-fill
-    text: Posts
-  publications:
-    path: ./publications
-    icon: mingcute:science-fill
-    text: Publications
-  # Projects: /projects
+  # posts:
+  #   path: ./archives
+  #   icon: mingcute:inbox-fill
+  #   text: Posts
   about:
     path: ./about
     icon: mingcute:user-info-fill
-    text: About
-  categories:
-    path: ./categories
-    icon: mingcute:classify-2-fill
-    text: Categories
-  tags:
-    path: ./tags
-    icon: mingcute:tag-fill
-    text: Tags
+    name: About
+    show_name: true
+  publications:
+    path: ./publications
+    icon: mingcute:science-fill
+    name: Publications
+    show_name: true
+  # Projects: /projects
+  # categories:
+  #   path: ./categories
+  #   icon: mingcute:classify-2-fill
+  #   text: Categories
+  # tags:
+  #   path: ./tags
+  #   icon: mingcute:tag-fill
+  #   text: Tags
   home:
     path: ./index
     icon: mingcute:home-2-fill
-
+    name: Home
+    show_name: true
   # To add a new page, use hexo new page, then add another entry below.
   # Each entry MUST have a path. In addition, it will render icon and/or text
   # if they are provided. It will be an empty button if none of these are 
   # provided.
 
-email: example@xxx.com
-my_location: Beijing, China
+email: jason.yan@berkeley.edu
+my_location: Berkeley, CA
 cv_path: /pdf/cv.pdf
-cv_last_update_date: Aug, 2024
+cv_last_update_date: Nov, 2024
 show_featured_posts: false
 year_align_center: false
 
@@ -42,20 +45,20 @@ year_align_center: false
 favicon: /favicon.ico
 
 # logo
-portrait: /images/logo.svg  # Your profile image here
+portrait: /images/photo.jpg  # Your profile image here
 show_profile_image: true
 
 # links
 links:
   Github:
-    link: https://www.github.com/chen-yingfa
+    link: https://www.github.com/ZhengxuYan
     icon: mingcute:github-fill
-  ZhiHu:
-    link: https://www.zhihu.com/people/chen-ying-fa-34
-    icon: ri:zhihu-line
-  Twitter:
-    link: https://www.twitter.com/DonnyChan123
-    icon: mingcute:social-x-fill
+  LinkedIn:
+    link: https://linkedin.com/in/zhengxu-yan
+    icon: mingcute:linkedin-fill
+  Email:
+    link: mailto:jason.yan@berkeley.edu
+    icon: mingcute:mail-fill
   # You can add more links below using the format above.
 
 # analytics

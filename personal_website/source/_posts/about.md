@@ -1,8 +1,8 @@
 ---
-title: about
-date: 2024-10-22 21:30:32
-categories: Paper
+title: My New Personal Website
+date: 2024-11-03 12:00:00
+categories: Life
 tags: 
-- paper
-- arxiv
+- Personal
+- Development
 ---
