@@ -51,13 +51,16 @@
         </div>
       </div>
       <!-- Description from config -->
+      <% const siteDescription = (config.description || '').toString(); %>
+      <% if (siteDescription.trim().length > 0) { %>
       <div class="description-container max-w-prose mx-auto grid grid-cols-1">
         <div class="text-left p-8">
           <p>
-            <%- config.description.replace(/(?:\r\n|\r|\n)/g, '<br>' ) %>
+            <%- siteDescription.replace(/(?:\r\n|\r|\n)/g, '<br>') %>
           </p>
         </div>
       </div>
+      <% } %>
       <!-- get content from index.md -->
       <div class="post-content mt-4">
       </div>
