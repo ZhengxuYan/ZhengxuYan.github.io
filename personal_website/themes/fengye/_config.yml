@@ -34,10 +34,10 @@ nav:
   # if they are provided. It will be an empty button if none of these are 
   # provided.
 
-email: jason.yan@berkeley.edu
-my_location: Berkeley, CA
+email: jasonyan@stanford.edu
+my_location: Stanford, CA
 cv_path: /pdf/cv.pdf
-cv_last_update_date: Nov, 2024
+cv_last_update_date: Jan, 2025
 show_featured_posts: false
 year_align_center: false
 
@@ -57,7 +57,7 @@ links:
     link: https://linkedin.com/in/zhengxu-yan
     icon: mingcute:linkedin-fill
   Email:
-    link: mailto:jason.yan@berkeley.edu
+    link: mailto:jasonyan@stanford.edu
     icon: mingcute:mail-fill
   # You can add more links below using the format above.
 

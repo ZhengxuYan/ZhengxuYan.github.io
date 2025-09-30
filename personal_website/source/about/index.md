@@ -6,7 +6,7 @@ layout: about
 
 ## Hello, I'm Zhengxu! 👋
 
-I'm currently a senior at UC Berkeley, pursuing a double major in Computer Science and Data Science. My academic journey has been driven by a deep fascination with the intersection of technology and real-world applications, particularly in the field of Machine Learning.
+I'm a Computer Science M.S. student at Stanford University (expected graduation April 2027) and a recent graduate of UC Berkeley, where I earned my B.A. in Computer Science and Data Science with High Distinction. My academic journey has been driven by a deep fascination with the intersection of rigorous systems research and real-world applications, particularly in verifiable code generation, diffusion transformers, and AI for healthcare operations.
 
 ### Academic Interests 🎓
 
@@ -16,11 +16,12 @@ My primary focus lies in Machine Learning and its applications. I'm particularly
 - Deep Reinforcement Learning
 - Systems Programming
 
-Through my coursework and research projects at Berkeley, I've had the opportunity to work on various exciting projects, from developing multi-agent LLM trading systems to implementing reinforcement learning solutions for healthcare facilities.
+Across Stanford and Berkeley, I've had the opportunity to work on a range of impactful projects—from benchmarking project-scale code agents and serving diffusion transformers, to implementing reinforcement learning solutions for healthcare facilities.
 
 ### Professional Journey 💻
 
 I've been fortunate to work on diverse projects that combine my technical skills with real-world applications. My experience spans:
+- Teaching and course operations for Berkeley's Large Language Model Agents curriculum
 - Research assistance at UC Berkeley's Sky Computing Lab
 - Machine Learning engineering at UC Berkeley's School of Public Health
 - Research in healthcare technology at the University of Nebraska
