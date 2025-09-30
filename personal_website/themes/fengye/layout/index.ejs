@@ -26,7 +26,7 @@
         <h2 class="text-2xl font-bold mb-4 text-center text-[var(--c-50)]">About Me</h2>
         <div class="text-left px-8">
           <p class="text-[var(--c-70)] leading-relaxed">
-            I'm currently a senior at UC Berkeley, majoring in Computer Science and Data Science. I have a keen interest in Machine Learning and enjoy staying updated with the latest developments in technology and software. In my free time, I enjoy playing soccer, video games (especially League of Legends), and badminton.
+            I'm a Computer Science M.S. student at Stanford University (expected April 2027) and a recent UC Berkeley graduate in Computer Science and Data Science. My work spans verifiable code generation, diffusion transformer systems, and AI for social impact, and I love building collaborative teams that turn research into real-world impact.
           </p>
         </div>
       </div>
@@ -40,7 +40,7 @@
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4 my-6 font-bold text-lg">
         <div class="flex flex-row items-center gap-1">
-          <p>Berkeley, CA</p>
+          <p>Stanford, CA</p>
           <iconify-icon width="24" icon="mingcute:building-1-fill"></iconify-icon>
         </div>
         <div class="flex flex-row items-center gap-1 group">
@@ -89,16 +89,33 @@
     <!-- Publications -->
     <section class="mb-12">
       <h2 class="text-2xl font-bold mb-4 text-[var(--c-50)]">Publications</h2>
-      <ul class="list-disc ml-5 space-y-4 text-[var(--c-70)]">
-        <li>
-          <strong>Yan, Z.</strong>, Dube, V., Heselton, J., Johnson, K., Yan, C., Jones, V., Blaskewicz Boron, J., & Shade, M. (2024). Understanding older people's voice interactions with smart voice assistants: a new modified rule-based natural language processing model with human input. <i>Frontiers in digital health</i>, 6, 1329910. 
-          <a href="https://doi.org/10.3389/fdgth.2024.1329910" class="text-blue-500 hover:underline">https://doi.org/10.3389/fdgth.2024.1329910</a>
-        </li>
-        <li>
-          Jones, V. K., Yan, C., Shade, M. Y., Boron, J. B., <strong>Yan, Z.</strong>, Heselton, H. J., Johnson, K., & Dube, V. (2024). Reducing Loneliness and Improving Social Support among Older Adults through Different Modalities of Personal Voice Assistants. <i>Geriatrics (Basel, Switzerland)</i>, 9(2), 22. 
-          <a href="https://doi.org/10.3390/geriatrics9020022" class="text-blue-500 hover:underline">https://doi.org/10.3390/geriatrics9020022</a>
-        </li>
-      </ul>
+      <div class="space-y-6 text-[var(--c-70)]">
+        <div>
+          <h3 class="text-xl font-semibold text-[var(--c-50)] mb-2">Under Review</h3>
+          <ul class="list-disc ml-5 space-y-4">
+            <li>
+              Ye, Z., <strong>Yan, Z.</strong>, He, J., Kasriel, T., Yang, K., &amp; Song, D. <i>VERINA: Benchmarking Verifiable Code Generation.</i> Under review at ICLR 2026.
+              <a href="https://arxiv.org/abs/2505.23135" class="text-blue-500 hover:underline">https://arxiv.org/abs/2505.23135</a>
+            </li>
+            <li>
+              Luo, M., Hao, A., <strong>Yan, Z.</strong>, Cao, C., &amp; Nguyen, Q. L. N. <i>DiT-Serve: An Efficient Serving Engine for Diffusion Transformers.</i> Under review at ICLR 2026.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-[var(--c-50)] mb-2">Published</h3>
+          <ul class="list-disc ml-5 space-y-4">
+            <li>
+              <strong>Yan, Z.</strong>, Dube, V., Heselton, J., Johnson, K., Yan, C., Jones, V., Blaskewicz Boron, J., &amp; Shade, M. (2024). Understanding older people’s voice interactions with smart voice assistants: a new modified rule-based natural language processing model with human input. <i>Frontiers in Digital Health</i>, 6, 1329910.
+              <a href="https://doi.org/10.3389/fdgth.2024.1329910" class="text-blue-500 hover:underline">https://doi.org/10.3389/fdgth.2024.1329910</a>
+            </li>
+            <li>
+              Jones, V. K., Yan, C., Shade, M. Y., Boron, J. B., <strong>Yan, Z.</strong>, Heselton, H. J., Johnson, K., &amp; Dube, V. (2024). Reducing Loneliness and Improving Social Support among Older Adults through Different Modalities of Personal Voice Assistants. <i>Geriatrics (Basel, Switzerland)</i>, 9(2), 22.
+              <a href="https://doi.org/10.3390/geriatrics9020022" class="text-blue-500 hover:underline">https://doi.org/10.3390/geriatrics9020022</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- Working Papers -->
@@ -106,18 +123,18 @@
       <h2 class="text-2xl font-bold mb-4 text-[var(--c-50)]">Working Papers</h2>
       <div class="space-y-6">
         <div>
-          <h3 class="font-semibold mb-2">DiT-Serving: Infinitely Long Video Generation Engine with Brick Attention Enhancing Throughput via Continuous Batching</h3>
+          <h3 class="font-semibold mb-2">VeriAgentBench: Benchmarking Project-Level Verifiable Code Agents in the Wild</h3>
           <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Integrated Brick Attention into Diffusion Transformer (DiT) models to enable near-infinite video generation, supported by continuous batching to achieve increased throughput.</li>
-            <li>Under the guidance of PhD candidate Michael Luo, advised by Dr. Ion Stoica, Prof. of Computer Science, I led the integration of Brick Attention with DiT models, enhancing the system's capacity for extended video generation, and implemented continuous batching techniques that significantly improved system throughput. The manuscript is in preparation for review.</li>
+            <li>Introduced a benchmark of 50 real-world repositories supporting repository-level verification of existing projects and verifiable generation from scratch.</li>
+            <li>Developed an automated evaluation pipeline measuring proof validity and functional correctness alongside Dr. Dawn Song and Dr. Kaiyu Yang, revealing that state-of-the-art code agents achieve single-digit success rates on VeriAgentBench.</li>
           </ul>
         </div>
 
         <div>
           <h3 class="font-semibold mb-2">Adaptive Operations Management in Buildings: A Reinforcement Learning Approach for Operational Adaptability in Healthcare Facilities</h3>
           <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Introduced a Reinforcement Learning-based framework to enable adaptive and integrated operations management in healthcare facilities, optimizing spatial, social, and operational performance through coordinated resource sharing.</li>
-            <li>Supervised by Dr. Yehuda Kalay and Dr. Davide Schaumann, I utilized deep reinforcement learning (RL) and simulation to develop a smart building management system for the Cardiac Catheterization Lab at St. Bernardine Medical Center.</li>
+            <li>Introduced a reinforcement learning-based framework to enable adaptive and integrated operations management in healthcare facilities, optimizing spatial, social, and operational performance through coordinated resource sharing.</li>
+            <li>Collaborated with Dr. Yehuda Kalay and Dr. Davide Schaumann to build a smart building management system for the Cardiac Catheterization Lab at St. Bernardine Medical Center, significantly enhancing facility adaptability and operational efficiency.</li>
           </ul>
         </div>
       </div>
@@ -183,7 +200,7 @@
             <li>Independently leveraged a fine-tuned Large Language Model (LLM) to efficiently categorize and identify preprints within the RR\ID domain.</li>
             <li>Led a team of 3 UC Berkeley CS students in utilizing LLM APIs to analyze and provide insights on medical preprints.</li>
             <li>Directed a team of 5 UC Berkeley CS students in engineering scripts to automate the collection of medical preprints.</li>
-            <li>Collaborated with the Dean of the UC Berkeley School of Public Health and researchers from UCSF to develop automated systems for academic review.</li>
+            <li>Collaborated with the Dean of the UC Berkeley School of Public Health and researchers from UCSF to develop automated systems for the academic review of infectious disease papers, set to be published by MIT Press.</li>
           </ul>
         </div>
 
@@ -227,7 +244,7 @@
           </div>
           <p class="text-[var(--c-70)] italic">Python, Pytorch, Tensorflow, AutoGen</p>
           <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Developed a multi-agent trading system integrating LLMs with specialized agents for multimodal data processing.</li>
+            <li>Developed a multi-agent trading system integrating LLMs with specialized agents for multimodal data processing, layered memory, and Retrieval-Augmented Generation, aiming to exceed standard prediction models by 5-7% in market accuracy.</li>
           </ul>
         </div>
 
@@ -238,7 +255,7 @@
           </div>
           <p class="text-[var(--c-70)] italic">Python</p>
           <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Employed nearest neighbors (k-NN) to predict geographic coordinates based on CLIP embeddings of geo-tagged images from Flickr.</li>
+            <li>Employed nearest neighbors (k-NN) to predict geographic coordinates based on CLIP embeddings of geo-tagged images from Flickr, capturing diverse landscape features across Spain.</li>
           </ul>
         </div>
 
@@ -249,7 +266,7 @@
           </div>
           <p class="text-[var(--c-70)] italic">Python, Pytorch</p>
           <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Engaged in the Kaggle MNIST classification challenge, leveraging various machine learning techniques including LDA, QDA, Logistic Regression, MLP, SVM, and CNN.</li>
+            <li>Engaged in the Kaggle MNIST classification challenge, leveraging Linear and Quadratic Discriminant Analysis, Logistic Regression, Multi-layer Perceptron, Support Vector Machines, and Convolutional Neural Networks to optimize prediction accuracy.</li>
           </ul>
         </div>
 
@@ -261,6 +278,18 @@
           <p class="text-[var(--c-70)] italic">Python, Tensorflow</p>
           <ul class="list-disc ml-5 text-[var(--c-70)]">
             <li>Engineered an RNN to identify word languages, achieving over 81% test set accuracy.</li>
+          </ul>
+        </div>
+
+        <div class="project-item mb-6">
+          <div class="flex justify-between items-start">
+            <h4 class="font-medium">Graph Partitioning for Unsupervised Learning</h4>
+            <span class="text-[var(--c-60)]">August 2022 – December 2022</span>
+          </div>
+          <p class="text-[var(--c-70)] italic">Golang, AWS, Google Cloud</p>
+          <ul class="list-disc ml-5 text-[var(--c-70)]">
+            <li>Developed graph partitioning algorithms using the Kernighan–Lin method to support unsupervised machine learning workflows.</li>
+            <li>Implemented a relational database and Golang backend deployed on AWS and Google Cloud to manage outputs and orchestrate large-scale experiments.</li>
           </ul>
         </div>
       </div>
@@ -309,31 +338,21 @@
         <h2 class="text-2xl font-bold mb-4 text-[var(--c-50)]">Education</h2>
         <div class="mb-4">
           <div class="flex justify-between items-start">
-            <h3 class="font-semibold">University of California, Berkeley</h3>
-            <span class="text-[var(--c-60)]">Expected Graduation: May 2025</span>
+            <h3 class="font-semibold">Stanford University</h3>
+            <span class="text-[var(--c-60)]">Expected Graduation: April 2027</span>
           </div>
-          <p class="text-[var(--c-70)]">Bachelor of Arts in Computer Science and Data Science</p>
-          <p class="text-[var(--c-70)]">GPA: 3.94/4.00, Dean's List, Honors to Date</p>
-          <p class="text-[var(--c-70)] mt-2">Coursework:</p>
-          <p class="text-[var(--c-70)]">Principles & Techniques of Data Science (Data C8/C100), Computer Programs (CS 61A), Data Structures (CS 61B), Machine Structures (CS 61C), Discrete Math and Probability (CS 70), Optimization Models (EECS 127), Probability for Data Science (Data C140), Computer Security (CS 161), Operating Systems (CS 162), Efficient Algorithm (CS 170), Computer Vision (CS 180), Artificial Intelligence (CS 188), Machine Learning (CS 189), LLM Agents (CS 194-196).</p>
+          <p class="text-[var(--c-70)]">Master of Science in Computer Science</p>
         </div>
-  
+
         <div class="mb-4">
           <div class="flex justify-between items-start">
-            <h3 class="font-semibold">Brownell Talbot School</h3>
-            <span class="text-[var(--c-60)]">2017 - 2021</span>
+            <h3 class="font-semibold">University of California, Berkeley</h3>
+            <span class="text-[var(--c-60)]">August 2021 – May 2025</span>
           </div>
-          <p class="text-[var(--c-70)]">GPA: 4.13/4.00</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Nebraska Class C State Championship team, Jan 2021</li>
-            <li>University of Nebraska-Omaha Summer Scholars Program, Aug 2020</li>
-            <li>Vex Robotics National rank 19 in Skills challenge, Jan 2020</li>
-            <li>Vex Robotics Global rank 44 Programmer, Jan 2020</li>
-            <li>Nebraska Math Competition State Finals, 19th place, Jan 2020</li>
-            <li>VEX Tournament Champions in multiple robotics tournaments</li>
-            <li>Excellence Award in Elkhorn HS VRC & Heartland Regional Robotics Championship</li>
-            <li>University of Nebraska-Lincoln Engineering Summer Research Program, Scholarship winner</li>
-          </ul>
+          <p class="text-[var(--c-70)]">Bachelor of Arts in Computer Science and Data Science</p>
+          <p class="text-[var(--c-70)]">GPA: 3.95/4.00, High Distinction</p>
+          <p class="text-[var(--c-70)] mt-2">Selected Coursework:</p>
+          <p class="text-[var(--c-70)]">Optimization Models (EECS 127), Probability for Data Science (Data C140), Computer Security (CS 161), Operating Systems (CS 162), Efficient Algorithm (CS 170), Computer Vision (CS 180), Artificial Intelligence (CS 188), Machine Learning (CS 189), LLM Agents (CS 194-196).</p>
         </div>
       </section>
   </div>
