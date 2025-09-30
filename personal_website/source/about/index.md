@@ -3,14 +3,14 @@ title: About Me
 date: 2024-10-22 21:37:06
 layout: about
 ---
-
 ## Hello, I'm Zhengxu! 👋
 
-I'm a Computer Science M.S. student at Stanford University (expected graduation April 2027) and a recent graduate of UC Berkeley, where I earned my B.A. in Computer Science and Data Science with High Distinction. My academic journey has been driven by a deep fascination with the intersection of rigorous systems research and real-world applications, particularly in verifiable code generation, diffusion transformers, and AI for healthcare operations.
+I'm a Computer Science M.S. student at Stanford University and a recent graduate of UC Berkeley, where I earned my B.A. in Computer Science and Data Science with High Distinction. My academic journey has been driven by a deep fascination with the intersection of rigorous systems research and real-world applications, particularly in verifiable code generation, diffusion transformers, and AI for healthcare operations.
 
 ### Academic Interests 🎓
 
 My primary focus lies in Machine Learning and its applications. I'm particularly interested in:
+
 - Large Language Models and their applications
 - Computer Vision and Image Processing
 - Deep Reinforcement Learning
@@ -21,6 +21,7 @@ Across Stanford and Berkeley, I've had the opportunity to work on a range of imp
 ### Professional Journey 💻
 
 I've been fortunate to work on diverse projects that combine my technical skills with real-world applications. My experience spans:
+
 - Teaching and course operations for Berkeley's Large Language Model Agents curriculum
 - Research assistance at UC Berkeley's Sky Computing Lab
 - Machine Learning engineering at UC Berkeley's School of Public Health
@@ -30,6 +31,7 @@ I've been fortunate to work on diverse projects that combine my technical skills
 ### Beyond the Code 🎮
 
 When I'm not coding or working on projects, you can find me:
+
 - Playing soccer with friends
 - Competing in League of Legends (always striving to improve my gameplay!)
 - Enjoying a game of badminton
