@@ -5,28 +5,30 @@ layout: about
 ---
 ## Hello, I'm Zhengxu! 👋
 
-I'm a Computer Science M.S. student at Stanford University and a recent graduate of UC Berkeley, where I earned my B.A. in Computer Science and Data Science with High Distinction. My academic journey has been driven by a deep fascination with the intersection of rigorous systems research and real-world applications, particularly in verifiable code generation, diffusion transformers, and AI for healthcare operations.
+I'm a Computer Science M.S. student at Stanford University and a UC Berkeley graduate in Computer Science and Data Science with High Distinction. My current work focuses on scalable model improvement, structured feedback, verifiable code generation, and empirical analysis of datasets and claims in NLP research.
 
 ### Academic Interests 🎓
 
-My primary focus lies in Machine Learning and its applications. I'm particularly interested in:
+My main interests sit at the intersection of machine learning systems and applied research. I'm especially interested in:
 
-- Large Language Models and their applications
-- Computer Vision and Image Processing
+- Large language models and agentic systems
+- Model feedback, critique, and iterative refinement
+- Verifiable code generation and evaluation
+- Dataset intelligence and scientific knowledge extraction
 - Deep Reinforcement Learning
 - Systems Programming
 
-Across Stanford and Berkeley, I've had the opportunity to work on a range of impactful projects—from benchmarking project-scale code agents and serving diffusion transformers, to implementing reinforcement learning solutions for healthcare facilities.
+Across Stanford and Berkeley, I've worked on projects ranging from benchmarking verifiable code generation and serving diffusion transformers to building reinforcement learning systems for healthcare operations and metadata pipelines for NLP research.
 
 ### Professional Journey 💻
 
-I've been fortunate to work on diverse projects that combine my technical skills with real-world applications. My experience spans:
+I'm currently a Graduate Research Assistant at Stanford's IRIS Lab and SALT Lab, where I work on feedback-driven model improvement and large-scale extraction of structured claims from NLP papers. My recent experience also includes:
 
-- Teaching and course operations for Berkeley's Large Language Model Agents curriculum
-- Research assistance at UC Berkeley's Sky Computing Lab
-- Machine Learning engineering at UC Berkeley's School of Public Health
-- Research in healthcare technology at the University of Nebraska
-- Backend development leadership in startup environments
+- Research at UC Berkeley's Sky Computing Lab on efficient serving systems for diffusion transformers
+- Research at UC Berkeley's College of Environmental Design on reinforcement learning for smart hospital operations
+- Machine learning engineering at UC Berkeley School of Public Health on infectious disease preprint triage and review tooling
+- Teaching support for Berkeley's Large Language Model Agents course
+- Applied NLP research with the University of Nebraska and backend engineering in startup environments
 
 ### Beyond the Code 🎮
 
@@ -39,7 +41,7 @@ When I'm not coding or working on projects, you can find me:
 
 ### Let's Connect!
 
-I'm always excited to connect with fellow tech enthusiasts, researchers, and potential collaborators. Feel free to reach out if you'd like to discuss technology, research opportunities, or just share thoughts about the latest developments in CS and ML!
+I'm always interested in connecting with researchers, builders, and potential collaborators. Feel free to reach out if you'd like to talk about ML systems, research ideas, or opportunities at the intersection of machine learning and real-world impact.
 
 ---
 
