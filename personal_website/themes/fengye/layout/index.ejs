@@ -1,374 +1,215 @@
-<div class="flex flex-col gap-0">
-  <div class="index-info-container pt-6 text-[var(--c-70)]">
-    <!-- Home page info, short text about me -->
-    <div class="flex flex-col items-center">
-      <% if (theme.show_profile_image) { %>
-      <a href="/about">
-        <img class="rounded-3xl w-48 hover:scale-[1.04] transition-transform" src="<%- theme.portrait %>"
-          alt="<%- config.title %>" />
-        </a>
-      <% } %>
-      <!-- Site title -->
-      <h1 class="
-        site-title
-        text-center
-        text-5xl
-        bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent
-        pb-4
-        pt-6
-        font-black
-        ">
-        <%= config.title %>
-      </h1>
-
-      <!-- About Me Section -->
-      <div class="max-w-prose mx-auto mt-8 mb-12">
-        <h2 class="text-2xl font-bold mb-4 text-center text-[var(--c-50)]">About Me</h2>
-        <div class="text-left px-8">
-          <p class="text-[var(--c-70)] leading-relaxed">
-            I'm a Computer Science M.S. student at Stanford University and a UC Berkeley graduate in Computer Science and Data Science. My current work spans scalable model improvement, verifiable code generation, diffusion transformer systems, and structured analysis of datasets and claims in NLP research.
-          </p>
+<div class="homepage-shell">
+  <section class="hero-panel">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Machine Learning Systems • AI Research</p>
+        <h1 class="hero-title">Zhengxu (Jason) Yan</h1>
+        <p class="hero-subtitle">
+          M.S. student at Stanford building feedback-driven learning systems, verifiable code benchmarks, and research pipelines for scientific discovery.
+        </p>
+        <p class="hero-description">
+          My recent work spans scalable model improvement, structured critique, diffusion transformer serving, and dataset intelligence for NLP. I’m interested in turning ambitious ML ideas into robust systems and clear empirical results.
+        </p>
+        <div class="hero-actions">
+          <a class="hero-button primary" href="<%= theme.cv_path %>">View CV</a>
+          <a class="hero-button" href="<%= url_for('/publications') %>">Publications</a>
+          <a class="hero-button" href="https://scholar.google.com/citations?user=q-NCJyMAAAAJ&hl=en">Google Scholar</a>
+          <a class="hero-button" href="<%= url_for('/about') %>">About</a>
+          <a class="hero-button" href="mailto:jasonyan@stanford.edu">Email</a>
+        </div>
+        <div class="signal-row">
+          <span class="signal-pill">Stanford, CA</span>
+          <span class="signal-pill">Research: LLMs, ML systems, RL</span>
         </div>
       </div>
 
-      <!-- Sub-title -->
-      <p class="
-        text-3xl font-extrabold text-center
-        bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent
-        text-[var(--c-80)]">
-        <%= config.subtitle %>
-      </p>
-      <div class="flex flex-wrap items-center justify-center gap-4 my-6 font-bold text-lg">
-        <div class="flex flex-row items-center gap-1">
-          <p>Stanford, CA</p>
-          <iconify-icon width="24" icon="mingcute:building-1-fill"></iconify-icon>
-        </div>
-        <div class="flex flex-row items-center gap-1 group">
-          <a href="<%= theme.cv_path %>" class="group-hover:underline">
-            CV (<%= theme.cv_last_update_date %>)
+      <div class="hero-aside">
+        <% if (theme.show_profile_image) { %>
+          <a href="/about" class="portrait-card">
+            <img class="portrait-image" src="<%- theme.portrait %>" alt="<%- config.title %>" />
           </a>
-          <iconify-icon class="transition-transform group-hover:scale-125" width="24" icon="mingcute:idcard-fill"></iconify-icon>
+        <% } %>
+        <div class="mini-panel">
+          <p class="mini-label">Current Focus</p>
+          <ul class="focus-list">
+            <li>Scaling feedback descent and iterative refinement</li>
+            <li>Verifiable code generation and benchmark design</li>
+            <li>Dataset metadata and claim extraction for NLP papers</li>
+          </ul>
         </div>
-      </div>
-      <!-- Description from config -->
-      <% const siteDescription = (config.description || '').toString(); %>
-      <% if (siteDescription.trim().length > 0) { %>
-      <div class="description-container max-w-prose mx-auto grid grid-cols-1">
-        <div class="text-left p-8">
-          <p>
-            <%- siteDescription.replace(/(?:\r\n|\r|\n)/g, '<br>') %>
-          </p>
-        </div>
-      </div>
-      <% } %>
-      <!-- get content from index.md -->
-      <div class="post-content mt-4">
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="homepage-section">
+    <div class="section-heading">
+      <p class="section-kicker">Selected Work</p>
+      <h2>Research highlights</h2>
+      <p>Representative papers and projects that best capture the direction of my recent research.</p>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature-card accent-blue">
+        <div class="feature-meta">Accepted at ICLR 2026</div>
+        <h3>VERINA: Benchmarking Verifiable Code Generation</h3>
+        <p>
+          Built a benchmark and evaluation pipeline for measuring whether generated code is actually correct and verifiable, targeting more reliable code agents.
+        </p>
+        <a href="https://arxiv.org/abs/2505.23135">Read arXiv</a>
+      </article>
+
+      <article class="feature-card accent-gold">
+        <div class="feature-meta">Under review at ICML 2026</div>
+        <h3>DiT-Serve</h3>
+        <p>
+          Designed serving improvements for diffusion transformers using attention optimizations and continuous batching for efficient high-throughput generation.
+        </p>
+      </article>
+
+      <article class="feature-card accent-green">
+        <div class="feature-meta">Preprint</div>
+        <h3>NoveltyRank</h3>
+        <p>
+          Explores how to estimate conceptual novelty in AI papers by extracting and modeling structured signals from scientific content.
+        </p>
+        <a href="https://arxiv.org/abs/2512.14738">Read arXiv</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="homepage-section">
+    <div class="section-heading">
+      <p class="section-kicker">Current Roles</p>
+      <h2>What I’m working on now</h2>
+      <p>Current research appointments and the systems questions they’re anchored around.</p>
+    </div>
+
+    <div class="timeline-grid">
+      <article class="timeline-card">
+        <div class="timeline-top">
+          <div>
+            <p class="timeline-role">Graduate Research Assistant</p>
+            <h3>IRIS Lab, Stanford AI Lab</h3>
+          </div>
+          <span class="timeline-date">Nov 2025 - Present</span>
+        </div>
+        <p class="timeline-summary">
+          Investigating feedback descent, structured critique models, and multi-round refinement pipelines for scalable model improvement.
+        </p>
+      </article>
+
+      <article class="timeline-card">
+        <div class="timeline-top">
+          <div>
+            <p class="timeline-role">Graduate Research Assistant</p>
+            <h3>SALT Lab, Stanford AI Lab</h3>
+          </div>
+          <span class="timeline-date">Nov 2025 - Present</span>
+        </div>
+        <p class="timeline-summary">
+          Building large-scale pipelines to extract dataset claims and structured metadata from NLP papers, with a focus on novelty and adoption signals.
+        </p>
+      </article>
+
+      <article class="timeline-card">
+        <div class="timeline-top">
+          <div>
+            <p class="timeline-role">Research Assistant</p>
+            <h3>Sky Computing Lab, UC Berkeley</h3>
+          </div>
+          <span class="timeline-date">Feb 2024 - Oct 2025</span>
+        </div>
+        <p class="timeline-summary">
+          Led attention-system integration and batching strategy work for diffusion transformer serving, pushing toward scalable video generation systems.
+        </p>
+      </article>
+
+      <article class="timeline-card">
+        <div class="timeline-top">
+          <div>
+            <p class="timeline-role">ML Engineer Lead</p>
+            <h3>UC Berkeley School of Public Health</h3>
+          </div>
+          <span class="timeline-date">Jan 2024 - Sep 2025</span>
+        </div>
+        <p class="timeline-summary">
+          Built automation and LLM-assisted review pipelines for infectious disease preprints in collaboration with Berkeley and UCSF researchers.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="homepage-section split-layout">
+    <div class="section-heading compact">
+      <p class="section-kicker">Selected Projects</p>
+      <h2>Systems + applied ML</h2>
+      <p>A few projects outside formal publications that reflect how I build.</p>
+    </div>
+
+    <div class="project-stack">
+      <article class="project-card">
+        <div class="project-top">
+          <h3>Multi-Agent LLM Trading System</h3>
+          <span>2024</span>
+        </div>
+        <p>Integrated specialized agents, multimodal inputs, layered memory, and retrieval to push beyond standard market prediction baselines.</p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <h3>Pintos Operating System</h3>
+          <span>2023</span>
+        </div>
+        <p>Extended a teaching OS across memory, scheduling, file systems, networking, and security, with a focus on systems fundamentals.</p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <h3>Secure Client Application</h3>
+          <span>2023</span>
+        </div>
+        <p>Built a secure Go client with cryptographic support for authentication, file sharing, and revocation.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="homepage-section">
+    <div class="section-heading">
+      <p class="section-kicker">Education</p>
+      <h2>Training</h2>
+    </div>
+
+    <div class="education-grid">
+      <article class="education-card">
+        <p class="education-school">Stanford University</p>
+        <h3>Master of Science in Computer Science</h3>
+        <p class="education-meta">Expected April 2027 • GPA 4.15/4.00</p>
+      </article>
+
+      <article class="education-card">
+        <p class="education-school">University of California, Berkeley</p>
+        <h3>B.A. in Computer Science and Data Science</h3>
+        <p class="education-meta">Aug 2021 - May 2025 • GPA 3.95/4.00 • High Distinction</p>
+        <p class="education-note">
+          Selected coursework: optimization, probability for data science, security, operating systems, algorithms, computer vision, AI, machine learning, and LLM agents.
+        </p>
+      </article>
+    </div>
+  </section>
 
   <% if (theme.show_featured_posts) { %>
-  <!-- 分割线 -->
-  <div class="flex flex-col items-center justify-center0">
-    <hr class="w-1/2 mb-10 h-[1px] bg-[var(--c-sep)] mr-1/2">
-    </hr>
-    <div class="flex flex-row items-center gap-2 text-[var(--c-50)]">
-      <iconify-icon width="28" icon="mingcute:star-fill"></iconify-icon>
-      <p class="text-center text-3xl">Featured Posts</p>
+    <div class="flex flex-col items-center justify-center0">
+      <hr class="w-1/2 mb-10 h-[1px] bg-[var(--c-sep)] mr-1/2">
+      </hr>
+      <div class="flex flex-row items-center gap-2 text-[var(--c-50)]">
+        <iconify-icon width="28" icon="mingcute:star-fill"></iconify-icon>
+        <p class="text-center text-3xl">Featured Posts</p>
+      </div>
     </div>
-  </div>
 
-  <!-- List of featured posts -->
-  <%- partial('_partial/post-list', {
-    posts: site.posts.filter(post => post.featured),
-    show_tags: false
-  }) %>
-
+    <%- partial('_partial/post-list', {
+      posts: site.posts.filter(post => post.featured),
+      show_tags: false
+    }) %>
   <% } %>
-
-  <!-- CV Content -->
-  <div class="cv-content max-w-4xl w-full mx-auto px-4">
-
-    <!-- Publications -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-4 text-[var(--c-50)]">Publications</h2>
-      <div class="space-y-6 text-[var(--c-70)]">
-        <div>
-          <h3 class="text-xl font-semibold text-[var(--c-50)] mb-2">Accepted and Published</h3>
-          <ul class="list-disc ml-5 space-y-4">
-            <li>
-              Ye, Z., <strong>Yan, Z.</strong>, He, J., Kasriel, T., Yang, K., &amp; Song, D. <i>VERINA: Benchmarking Verifiable Code Generation.</i> Accepted at ICLR 2026.
-              <a href="https://arxiv.org/abs/2505.23135" class="text-blue-500 hover:underline">https://arxiv.org/abs/2505.23135</a>
-            </li>
-            <li>
-              <strong>Yan, Z.</strong>, Dube, V., Heselton, J., Johnson, K., Yan, C., Jones, V., Blaskewicz Boron, J., &amp; Shade, M. (2024). Understanding older people’s voice interactions with smart voice assistants: a new modified rule-based natural language processing model with human input. <i>Frontiers in Digital Health</i>, 6, 1329910.
-              <a href="https://doi.org/10.3389/fdgth.2024.1329910" class="text-blue-500 hover:underline">https://doi.org/10.3389/fdgth.2024.1329910</a>
-            </li>
-            <li>
-              Jones, V. K., Yan, C., Shade, M. Y., Boron, J. B., <strong>Yan, Z.</strong>, Heselton, H. J., Johnson, K., &amp; Dube, V. (2024). Reducing Loneliness and Improving Social Support among Older Adults through Different Modalities of Personal Voice Assistants. <i>Geriatrics (Basel, Switzerland)</i>, 9(2), 22.
-              <a href="https://doi.org/10.3390/geriatrics9020022" class="text-blue-500 hover:underline">https://doi.org/10.3390/geriatrics9020022</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold text-[var(--c-50)] mb-2">Under Review</h3>
-          <ul class="list-disc ml-5 space-y-4">
-            <li>
-              Schaumann, D., <strong>Yan, Z.</strong>, Haiman, E., &amp; Kalay, Y. E. <i>A Deep Reinforcement Learning Framework for Multi-Dimensional Adaptability in Building Operations.</i> Under review at <i>Journal of Building Engineering</i>.
-            </li>
-            <li>
-              Luo, M., Hao, A., <strong>Yan, Z.</strong>, Cao, C., &amp; Nguyen, Q. L. N. <i>DiT-Serve: An Efficient Serving Engine for Diffusion Transformers.</i> Under review at ICML 2026.
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold text-[var(--c-50)] mb-2">Preprints and Working Papers</h3>
-          <ul class="list-disc ml-5 space-y-4">
-            <li>
-              <strong>Yan, Z.</strong>, Li, H., &amp; Feng, Y. <i>NoveltyRank: Estimating Conceptual Novelty of AI Papers.</i>
-              <a href="https://arxiv.org/abs/2512.14738" class="text-blue-500 hover:underline">https://arxiv.org/abs/2512.14738</a>
-            </li>
-            <li>
-              <i>VeriAgentBench: Benchmarking Project-Level Verifiable Code Agents in the Wild.</i> In preparation for journal submission.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Work Experience -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-4 text-[var(--c-50)]">Work Experience</h2>
-      <div class="space-y-6">
-        <div class="experience-item">
-          <div class="flex justify-between items-start">
-            <h3 class="font-semibold">Graduate Research Assistant</h3>
-            <span class="text-[var(--c-60)]">November 2025 - Present</span>
-          </div>
-          <p class="italic text-[var(--c-70)]">Intelligence through Robotic Interaction at Scale Lab (IRIS), Stanford AI Lab</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Conducting research on scaling Feedback Descent for iterative model improvement.</li>
-            <li>Investigating structured critique models and multi-round refinement pipelines for research plan generation and related tasks.</li>
-            <li>Building toward a scalable feedback framework that improves performance without task-specific retraining.</li>
-          </ul>
-        </div>
-
-        <div class="experience-item">
-          <div class="flex justify-between items-start">
-            <h3 class="font-semibold">Graduate Research Assistant</h3>
-            <span class="text-[var(--c-60)]">November 2025 - Present</span>
-          </div>
-          <p class="italic text-[var(--c-70)]">Stanford Social and Language Technologies Lab (SALT), Stanford AI Lab</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Building large-scale pipelines to extract structured metadata and dataset claims from recent NLP papers.</li>
-            <li>Developing representations for dataset novelty, adoption, and conceptual contribution.</li>
-            <li>Working toward empirical analyses of dataset trends and impact across major NLP venues.</li>
-          </ul>
-        </div>
-
-        <div class="experience-item">
-          <div class="flex justify-between items-start">
-            <h3 class="font-semibold">Research Assistant</h3>
-            <span class="text-[var(--c-60)]">February 2024 - October 2025</span>
-          </div>
-          <p class="italic text-[var(--c-70)]">UC Berkeley Sky Computing Lab</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Competitively selected through UC Berkeley EECS Diversifying Access to Research in Engineering (DARE) and Sky Summer Undergraduate Programs to join the DiT-Serving Project as a research assistant.</li>
-            <li>Led a team of 5 research assistants in integrating Ring Attention and Brick Attention into Diffusion Transformer (DiT) models, pioneering scalable video generation techniques.</li>
-            <li>Directed continuous batching strategies to optimize system throughput, enhancing performance efficiency across video processing requests.</li>
-          </ul>
-        </div>
-
-        <div class="experience-item">
-          <div class="flex justify-between items-start">
-            <h3 class="font-semibold">Research Assistant</h3>
-            <span class="text-[var(--c-60)]">February 2024 - September 2025</span>
-          </div>
-          <p class="italic text-[var(--c-70)]">UC Berkeley College of Environmental Design</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Competitively selected to join the Smart Hospital Project through UC Berkeley Undergraduate Research Apprentice Program.</li>
-            <li>Led a team of 3 research assistants in the development and implementation of a deep reinforcement learning-based smart building management system for the Cardiac Catheterization Lab at St. Bernardine Medical Center.</li>
-          </ul>
-        </div>
-
-        <div class="experience-item">
-          <div class="flex justify-between items-start">
-            <h3 class="font-semibold">Machine Learning (ML) Engineer Lead</h3>
-            <span class="text-[var(--c-60)]">January 2024 - September 2025</span>
-          </div>
-          <p class="italic text-[var(--c-70)]">UC Berkeley School of Public Health</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Selected as lead computer scientist for Rapid Reviews: Infectious Diseases via the UC Berkeley CDSS Discovery Program.</li>
-            <li>Independently leveraged a fine-tuned Large Language Model (LLM) to efficiently categorize and identify preprints within the RR\ID domain.</li>
-            <li>Led a team of 3 UC Berkeley CS students in utilizing LLM APIs to analyze and provide insights on medical preprints.</li>
-            <li>Directed a team of 5 UC Berkeley CS students in engineering scripts to automate the collection of medical preprints.</li>
-            <li>Collaborated with the Dean of the UC Berkeley School of Public Health and researchers from UCSF to develop automated systems for the academic review of infectious disease papers, set to be published by MIT Press.</li>
-          </ul>
-        </div>
-
-        <div class="experience-item">
-          <div class="flex justify-between items-start">
-            <h3 class="font-semibold">Teaching Assistant for Large Language Model Agents (CS 194-196)</h3>
-            <span class="text-[var(--c-60)]">August 2024 - May 2025</span>
-          </div>
-          <p class="italic text-[var(--c-70)]">Department of Electrical Engineering and Computer Sciences at UC Berkeley</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Coordinated course logistics, managed lecture recordings, enhanced assignment materials, and provided academic support by addressing student inquiries.</li>
-            <li>Assisted in organizing and coordinating the LLM Agents Hackathon, hosted by Berkeley RDI in conjunction with the LLM Agents MOOC.</li>
-          </ul>
-        </div>
-
-        <div class="experience-item">
-          <div class="flex justify-between items-start">
-            <h3 class="font-semibold">Research Assistant</h3>
-            <span class="text-[var(--c-60)]">April 2023 – September 2023</span>
-          </div>
-          <p class="italic text-[var(--c-70)]">University of Nebraska</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Collaborated with gerontology and nursing researchers to develop a natural language processing (NLP) model designed to automate the processing of speech-to-text data from user interactions with AI-enabled smart voice assistants.</li>
-          </ul>
-        </div>
-
-        <div class="experience-item">
-          <div class="flex justify-between items-start">
-            <h3 class="font-semibold">Backend Engineer Lead</h3>
-            <span class="text-[var(--c-60)]">October 2022 – December 2022</span>
-          </div>
-          <p class="italic text-[var(--c-70)]">Coffee Tea, Inc.</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Led a team of 3 UC Berkeley computer science students in backend development for a social platform.</li>
-            <li>Directed the design and development of backend REST APIs using FastAPI, Poetry, Alembic, and PostgreSQL.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-4 text-[var(--c-50)]">Projects</h2>
-      
-      <!-- Machine Learning Projects -->
-      <div class="mb-8">
-        <h3 class="text-xl font-semibold mb-4">Machine Learning</h3>
-        
-        <div class="project-item mb-6">
-          <div class="flex justify-between items-start">
-            <h4 class="font-medium">Multi-Agent LLM Trading System</h4>
-            <span class="text-[var(--c-60)]">August 2024 – Present</span>
-          </div>
-          <p class="text-[var(--c-70)] italic">Python, Pytorch, Tensorflow, AutoGen</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Developed a multi-agent trading system integrating LLMs with specialized agents for multimodal data processing, layered memory, and Retrieval-Augmented Generation, aiming to exceed standard prediction models by 5-7% in market accuracy.</li>
-          </ul>
-        </div>
-
-        <div class="project-item mb-6">
-          <div class="flex justify-between items-start">
-            <h4 class="font-medium">IM2SPAIN Project</h4>
-            <span class="text-[var(--c-60)]">January 2024 – May 2024</span>
-          </div>
-          <p class="text-[var(--c-70)] italic">Python</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Employed nearest neighbors (k-NN) to predict geographic coordinates based on CLIP embeddings of geo-tagged images from Flickr, capturing diverse landscape features across Spain.</li>
-          </ul>
-        </div>
-
-        <div class="project-item mb-6">
-          <div class="flex justify-between items-start">
-            <h4 class="font-medium">MNIST Competition</h4>
-            <span class="text-[var(--c-60)]">January 2024 – May 2024</span>
-          </div>
-          <p class="text-[var(--c-70)] italic">Python, Pytorch</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Engaged in the Kaggle MNIST classification challenge, leveraging Linear and Quadratic Discriminant Analysis, Logistic Regression, Multi-layer Perceptron, Support Vector Machines, and Convolutional Neural Networks to optimize prediction accuracy.</li>
-          </ul>
-        </div>
-
-        <div class="project-item mb-6">
-          <div class="flex justify-between items-start">
-            <h4 class="font-medium">Language Identification RNN</h4>
-            <span class="text-[var(--c-60)]">August 2023 – December 2023</span>
-          </div>
-          <p class="text-[var(--c-70)] italic">Python, Tensorflow</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Engineered an RNN to identify word languages, achieving over 81% test set accuracy.</li>
-          </ul>
-        </div>
-
-        <div class="project-item mb-6">
-          <div class="flex justify-between items-start">
-            <h4 class="font-medium">Graph Partitioning for Unsupervised Learning</h4>
-            <span class="text-[var(--c-60)]">August 2022 – December 2022</span>
-          </div>
-          <p class="text-[var(--c-70)] italic">Golang, AWS, Google Cloud</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Developed graph partitioning algorithms using the Kernighan–Lin method to support unsupervised machine learning workflows.</li>
-            <li>Implemented a relational database and Golang backend deployed on AWS and Google Cloud to manage outputs and orchestrate large-scale experiments.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Systems Programming Projects -->
-      <div class="mb-8">
-        <h3 class="text-xl font-semibold mb-4">Systems Programming and Software Development</h3>
-        
-        <div class="project-item mb-6">
-          <div class="flex justify-between items-start">
-            <h4 class="font-medium">Pintos Operating System</h4>
-            <span class="text-[var(--c-60)]">January 2023 – May 2023</span>
-          </div>
-          <p class="text-[var(--c-70)] italic">C, Rust</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Led the development of a comprehensive Pintos operating system, focusing on systems programming, memory allocation, resource management, file systems, networking, and security.</li>
-          </ul>
-        </div>
-
-        <div class="project-item mb-6">
-          <div class="flex justify-between items-start">
-            <h4 class="font-medium">Secure Client Application</h4>
-            <span class="text-[var(--c-60)]">January 2023 – May 2023</span>
-          </div>
-          <p class="text-[var(--c-70)] italic">Golang</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Developed a secure client Golang application incorporating cryptographic primitives for authentication and file management.</li>
-          </ul>
-        </div>
-
-        <div class="project-item mb-6">
-          <div class="flex justify-between items-start">
-            <h4 class="font-medium">Gitlet Version Control System</h4>
-            <span class="text-[var(--c-60)]">January 2021 – May 2022</span>
-          </div>
-          <p class="text-[var(--c-70)] italic">Java</p>
-          <ul class="list-disc ml-5 text-[var(--c-70)]">
-            <li>Created "Gitlet," a Git-like Version Control System, to streamline tracking and management of code changes across projects.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section class="mb-12">
-        <h2 class="text-2xl font-bold mb-4 text-[var(--c-50)]">Education</h2>
-        <div class="mb-4">
-          <div class="flex justify-between items-start">
-            <h3 class="font-semibold">Stanford University</h3>
-            <span class="text-[var(--c-60)]">Expected Graduation: April 2027</span>
-          </div>
-          <p class="text-[var(--c-70)]">Master of Science in Computer Science</p>
-          <p class="text-[var(--c-70)]">GPA: 4.15/4.00</p>
-        </div>
-
-        <div class="mb-4">
-          <div class="flex justify-between items-start">
-            <h3 class="font-semibold">University of California, Berkeley</h3>
-            <span class="text-[var(--c-60)]">August 2021 – May 2025</span>
-          </div>
-          <p class="text-[var(--c-70)]">Bachelor of Arts in Computer Science and Data Science</p>
-          <p class="text-[var(--c-70)]">GPA: 3.95/4.00, High Distinction</p>
-          <p class="text-[var(--c-70)] mt-2">Selected Coursework:</p>
-          <p class="text-[var(--c-70)]">Optimization Models (EECS 127), Probability for Data Science (Data C140), Computer Security (CS 161), Operating Systems (CS 162), Efficient Algorithm (CS 170), Computer Vision (CS 180), Artificial Intelligence (CS 188), Machine Learning (CS 189), LLM Agents (CS 194-196).</p>
-        </div>
-      </section>
-  </div>
 </div>

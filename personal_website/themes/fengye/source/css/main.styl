@@ -5,36 +5,45 @@ html, body
   margin: 0px
   padding: 0px
   text-underline-offset: 2px
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Avenir Next", "Segoe UI", sans-serif
   transition-duration: 0.2s
 
 :root {
   --c-transparent: transparent
-  --c-theme-1: #bed5f9
-  --c-theme: #4f90e6
-  --c-theme-2: #3058b6
-  --c-0: #ffffff
-  --c-10: #f6f8fa
-  --c-20: #f3f4f6
-  --c-25: #e5e7eb
-  --c-30: #e5e7eb
-  --c-40: #d1d5db
-  --c-50: #9ca3af
-  --c-60: #6b7280
-  --c-70: #4b5563
-  --c-80: #374151
-  --c-90: #1f2937
-  --c-100: #111827
+  --c-theme-1: #d8e8ff
+  --c-theme: #1f6feb
+  --c-theme-2: #0f3f8c
+  --c-0: #fcfaf5
+  --c-10: #f3efe5
+  --c-20: #ebe4d5
+  --c-25: #e0d8c8
+  --c-30: #d4ccb9
+  --c-40: #b8af9d
+  --c-50: #8a806f
+  --c-60: #655d52
+  --c-70: #494237
+  --c-80: #2d281f
+  --c-90: #1f1a14
+  --c-100: #15110c
   --c-text: #444444
-  --c-bg-code: #f6f8fa
+  --c-bg-code: #f4efe5
   --c-code-line-number: #bbb
-  --c-scrollbar: #d9d9d9
-  --c-scrollbar-hover: #bbbbbb
-  --c-border: #d1d7dd
-  --c-sep: #e1e4e8
-  --c-sep-2: #d1d4d8
+  --c-scrollbar: #d4c8b8
+  --c-scrollbar-hover: #b7a996
+  --c-border: #ded4c4
+  --c-sep: #e4dccd
+  --c-sep-2: #cfc4b2
   --c-code-language: #9ca3af
   --h-header: 48px
+  --surface-1: rgba(255,255,255,0.88)
+  --surface-2: rgba(255,255,255,0.72)
+  --surface-3: rgba(247,242,232,0.92)
+  --surface-accent-blue: #eef4fb
+  --surface-accent-gold: #f7efe2
+  --surface-accent-green: #eef4ee
+  --button-text: var(--c-90)
+  --button-border: rgba(21,17,12,0.08)
+  --button-hover: #ffffff
 }
 
 html.dark
@@ -62,6 +71,15 @@ html.dark
   --c-sep: #3f4339
   --c-sep-2: #818488
   --c-code-language: #8c939f
+  --surface-1: rgba(31,34,39,0.92)
+  --surface-2: rgba(37,40,46,0.9)
+  --surface-3: rgba(27,29,34,0.96)
+  --surface-accent-blue: #202833
+  --surface-accent-gold: #28241f
+  --surface-accent-green: #1f2824
+  --button-text: #ece7dc
+  --button-border: rgba(255,255,255,0.08)
+  --button-hover: #2b3038
 
 a
   color: var(--c-theme)
@@ -214,6 +232,315 @@ hr
     width: 100%
     // display: none
     display: block
+
+.homepage-shell
+  max-width: 1120px
+  margin: 0 auto
+  padding: 2rem 1rem 4rem
+
+.hero-panel
+  position: relative
+  overflow: hidden
+  border: 1px solid var(--c-border)
+  border-radius: 32px
+  background: linear-gradient(180deg, var(--surface-1), var(--surface-3))
+  box-shadow: 0 20px 70px rgba(27, 39, 62, 0.08)
+  margin-bottom: 2rem
+
+.hero-grid
+  display: grid
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr)
+  gap: 1.5rem
+  padding: 2rem
+  align-items: start
+
+.hero-eyebrow
+  font-size: 0.8rem
+  letter-spacing: 0.18em
+  text-transform: uppercase
+  color: var(--c-theme)
+  margin-bottom: 1rem
+  font-weight: 700
+
+.hero-title
+  font-size: clamp(2.5rem, 5vw, 4.4rem)
+  line-height: 0.95
+  letter-spacing: -0.05em
+  color: var(--c-100)
+  margin: 0
+
+.hero-subtitle
+  font-size: 1.35rem
+  line-height: 1.35
+  color: var(--c-90)
+  max-width: 42rem
+  margin: 1.5rem 0 1rem
+
+.hero-description
+  font-size: 1rem
+  line-height: 1.8
+  color: var(--c-70)
+  max-width: 42rem
+  margin: 0 0 1.5rem
+
+.hero-actions
+  display: flex
+  flex-wrap: wrap
+  gap: 0.8rem
+  margin-bottom: 1.2rem
+
+.hero-button
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  border: 1px solid var(--button-border)
+  border-radius: 999px
+  padding: 0.8rem 1.1rem
+  color: var(--button-text)
+  background: var(--surface-2)
+  text-decoration: none
+  font-weight: 700
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04)
+  transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease
+
+.hero-button:hover
+  transform: translateY(-1px)
+  border-color: var(--c-theme)
+  background: var(--button-hover)
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08)
+  text-decoration: none
+
+.hero-button.primary
+  background: var(--c-theme)
+  border-color: var(--c-theme)
+  color: white
+  box-shadow: 0 12px 24px rgba(31,111,235,0.22)
+
+.hero-button.primary:hover
+  background: #185fc9
+  border-color: #185fc9
+
+html.dark .hero-button.primary:hover
+  background: #3f84ef
+  border-color: #3f84ef
+
+.signal-row
+  display: flex
+  flex-wrap: wrap
+  gap: 0.7rem
+
+.signal-pill
+  display: inline-flex
+  align-items: center
+  border-radius: 999px
+  padding: 0.45rem 0.8rem
+  background: var(--surface-2)
+  border: 1px solid var(--button-border)
+  color: var(--c-70)
+  font-size: 0.92rem
+
+.hero-aside
+  display: flex
+  flex-direction: column
+  gap: 1rem
+
+.portrait-card
+  display: block
+  padding: 0.6rem
+  border-radius: 28px
+  background: linear-gradient(180deg, var(--surface-1), var(--surface-3))
+  border: 1px solid var(--c-border)
+  box-shadow: 0 18px 40px rgba(27, 39, 62, 0.10)
+
+.portrait-image
+  display: block
+  width: 100%
+  border-radius: 22px
+
+.mini-panel
+  border-radius: 24px
+  padding: 1.15rem
+  background: var(--surface-1)
+  border: 1px solid var(--c-border)
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.7)
+
+.mini-label
+  margin: 0 0 0.75rem
+  color: var(--c-80)
+  font-size: 0.78rem
+  font-weight: 800
+  letter-spacing: 0.12em
+  text-transform: uppercase
+
+.focus-list
+  list-style: none
+  margin: 0
+  padding-left: 0
+  color: var(--c-70)
+
+.focus-list li
+  position: relative
+  padding: 0.85rem 0 0.85rem 1rem
+  line-height: 1.55
+  border-top: 1px solid var(--c-sep)
+
+.focus-list li:first-child
+  border-top: 0
+  padding-top: 0.2rem
+
+.focus-list li::before
+  content: ''
+  position: absolute
+  left: 0
+  top: 1.45rem
+  width: 0.42rem
+  height: 0.42rem
+  border-radius: 999px
+  background: var(--c-theme)
+
+.homepage-section
+  margin-top: 2.75rem
+
+.section-heading
+  max-width: 42rem
+  margin-bottom: 1.4rem
+
+.section-heading.compact
+  margin-bottom: 0
+
+.section-kicker
+  margin: 0 0 0.4rem
+  color: var(--c-theme)
+  font-size: 0.84rem
+  font-weight: 800
+  letter-spacing: 0.14em
+  text-transform: uppercase
+
+.section-heading h2
+  margin: 0
+  font-size: 2rem
+  color: var(--c-100)
+
+.section-heading p
+  margin: 0.5rem 0 0
+  color: var(--c-60)
+  line-height: 1.7
+
+.feature-grid
+  display: grid
+  grid-template-columns: repeat(3, minmax(0, 1fr))
+  gap: 1rem
+
+.feature-card, .timeline-card, .project-card, .education-card
+  border: 1px solid var(--c-border)
+  border-radius: 24px
+  padding: 1.3rem
+  background: var(--surface-1)
+  box-shadow: 0 12px 28px rgba(27, 39, 62, 0.06)
+
+.feature-card
+  min-height: 220px
+
+.feature-meta
+  display: inline-block
+  padding: 0.28rem 0.6rem
+  border-radius: 999px
+  background: var(--c-10)
+  color: var(--c-theme)
+  font-size: 0.8rem
+  font-weight: 700
+  margin-bottom: 1rem
+
+.feature-card h3, .timeline-card h3, .project-card h3, .education-card h3
+  margin: 0 0 0.7rem
+  color: var(--c-100)
+  font-size: 1.18rem
+  line-height: 1.35
+
+.feature-card p, .timeline-summary, .project-card p, .education-note
+  color: var(--c-70)
+  line-height: 1.7
+  margin: 0
+
+.feature-card a
+  display: inline-block
+  margin-top: 1rem
+  font-weight: 700
+
+.accent-blue
+  background: linear-gradient(180deg, var(--surface-accent-blue), var(--surface-1))
+
+.accent-gold
+  background: linear-gradient(180deg, var(--surface-accent-gold), var(--surface-1))
+
+.accent-green
+  background: linear-gradient(180deg, var(--surface-accent-green), var(--surface-1))
+
+.timeline-grid
+  display: grid
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+  gap: 1rem
+
+.timeline-top, .project-top
+  display: flex
+  justify-content: space-between
+  gap: 1rem
+  align-items: flex-start
+  margin-bottom: 0.75rem
+
+.timeline-role, .education-school
+  margin: 0 0 0.25rem
+  color: var(--c-theme)
+  font-size: 0.84rem
+  font-weight: 800
+  letter-spacing: 0.08em
+  text-transform: uppercase
+
+.timeline-date, .project-top span, .education-meta
+  color: var(--c-60)
+  font-size: 0.9rem
+  white-space: nowrap
+
+.split-layout
+  display: grid
+  grid-template-columns: 0.8fr 1.2fr
+  gap: 1.25rem
+  align-items: start
+
+.project-stack
+  display: grid
+  gap: 1rem
+
+.education-grid
+  display: grid
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+  gap: 1rem
+
+@media (max-width: 960px)
+  .hero-grid
+    grid-template-columns: 1fr
+  .feature-grid
+    grid-template-columns: 1fr
+  .timeline-grid
+    grid-template-columns: 1fr
+  .split-layout
+    grid-template-columns: 1fr
+  .education-grid
+    grid-template-columns: 1fr
+
+@media (max-width: 640px)
+  .homepage-shell
+    padding: 1rem 0.8rem 3rem
+  .hero-grid
+    padding: 1.2rem
+  .hero-title
+    font-size: 2.8rem
+  .hero-subtitle
+    font-size: 1.1rem
+  .timeline-top, .project-top
+    flex-direction: column
+  .timeline-date, .project-top span
+    white-space: normal
 
 li.task-list-item
   list-style-type: none
